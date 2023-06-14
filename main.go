@@ -72,7 +72,7 @@ var (
 
 // updatetemplateInformation is called on startup and upon every block connected notification received.
 func updatetemplateInformation(ctx context.Context, dcrdClient *rpcclient.Client, latestBlockHeader *wire.BlockHeader) {
-	log.Println("Updating vote information")
+	log.Printf("%s Updating vote information")
 
 	hash := latestBlockHeader.BlockHash()
 	height := int64(latestBlockHeader.Height)
